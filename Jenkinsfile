@@ -8,13 +8,13 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'gradle clean test'
+        sh 'gradlew clean test'
       }
     }
     stage('build') {
       steps {
         echo 'build start'
-        sh 'gradle build -x test'
+        sh 'gradlew build -x test'
       }
     }
     stage('show directory files') {
