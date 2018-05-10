@@ -8,12 +8,18 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'ls'
+        sh './gradlew clean test'
       }
     }
-    stage('done') {
+    stage('build') {
       steps {
-        echo 'hi'
+        echo 'build start'
+        sh './gradlew build -x test'
+      }
+    }
+    stage('show directory files') {
+      steps {
+        sh 'ls ./build/libs'
       }
     }
   }
