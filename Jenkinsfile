@@ -18,7 +18,9 @@ pipeline {
     }
     stage('remote shell test') {
       steps {
-        sh 'echo $sendyUrl'
+        sh '''/hello.sh
+whoami
+'''
       }
     }
   }
