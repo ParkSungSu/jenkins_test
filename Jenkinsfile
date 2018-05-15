@@ -13,7 +13,8 @@ pipeline {
     }
     stage('shell test') {
       steps {
-        sh 'ls -al'
+        sh '''ls -al
+pwd'''
       }
     }
     stage('remote shell test') {
