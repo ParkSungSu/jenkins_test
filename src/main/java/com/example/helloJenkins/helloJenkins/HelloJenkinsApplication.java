@@ -11,7 +11,7 @@ public class HelloJenkinsApplication {
 
 	@GetMapping(value = "/")
 	public String helloJenkins() {
-		return "호로로롤로로로로롱";
+		return "테스트입니다.";
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(HelloJenkinsApplication.class, args);
