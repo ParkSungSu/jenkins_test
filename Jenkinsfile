@@ -24,6 +24,11 @@ whoami
 '''
       }
     }
+    stage('testpss') {
+      steps {
+        echo 'aaa'
+      }
+    }
   }
   environment {
     sendyUrl = 'ec2-13-209-0-21.ap-northeast-2.compute.amazonaws.com'
