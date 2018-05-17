@@ -23,7 +23,7 @@ pipeline {
     }
     stage('testpss') {
       steps {
-        slackSend(message: '한국어도 되는지 테스트 좀 해볼게요.')
+        slackSend(message: 'wtf? only english??')
       }
     }
   }
