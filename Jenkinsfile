@@ -1,20 +1,16 @@
 pipeline {
   agent any
   stages {
-
     stage('build') {
       steps {
         sh './gradlew clean build -x test'
       }
     }
-
     stage('test') {
       steps {
-        sh './gradlew clean test'
+        sh './gradlew test'
       }
     }
-
-
     stage('remote shell test') {
       steps {
         sh '''/hello.sh
@@ -23,7 +19,7 @@ pipeline {
     }
     stage('testpss') {
       steps {
-        slackSend(message: '한글가능?')
+        slackSend 'jenkins test'
       }
     }
   }
