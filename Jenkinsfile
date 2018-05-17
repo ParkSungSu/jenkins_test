@@ -27,6 +27,7 @@ whoami
     stage('testpss') {
       steps {
         echo 'aaa'
+        slackSend(message: 'message test by pss')
       }
     }
   }
